@@ -91,4 +91,66 @@ body {
 .container {
   max-width: 1200px;
 }
+
+.task {
+  border-radius: 5px;
+}
+
+.input-task {
+  padding: 32px 32px 32px 67px;
+  border: 2px solid #C8C8C8;
+  font-size: 24px;
+}
+
+.input-task::-webkit-input-placeholder {
+  color: #C8C8C8;
+}
+
+.input-task:-ms-input-placeholder {
+  color: #C8C8C8;
+}
+
+.input-task::-ms-input-placeholder {
+  color: #C8C8C8;
+}
+
+.input-task::placeholder {
+  color: #C8C8C8;
+}
+
+.add-task {
+  position: relative;
+  display: inline-block;
+}
+
+.add-task::before {
+  font-weight: 700;
+  content: "+";
+  font-size: 36px;
+  color: #C8C8C8;
+  position: absolute;
+  left: 32px;
+  top: 49%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.header {
+  background-color: #1F2041;
+}
+
+.header a {
+  color: #B0BBBF;
+  padding: 23px 36px 25px;
+  font-size: 24px;
+}
+
+.header .active a {
+  color: #fff;
+  border-bottom: 5px solid #BDE8F9;
+}
+
+.content {
+  margin-top: 24px;
+}
 /*# sourceMappingURL=all.css.map */
