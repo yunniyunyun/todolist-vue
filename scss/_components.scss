@@ -1,6 +1,51 @@
 .task {
     border-radius: 5px;
 }
+.task-card{
+    padding: 24px 72px;
+    margin-bottom: 8px;
+    background-color: $card-color;
+    position: relative;
+    input{
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 32px;
+        // clip: rect(2px,26px,26px,2px);
+        clip-path: inset(1px 1px 1px 1px round 2px);
+    }
+}
+.icon{
+    font-size: 24px; 
+    color: black;
+    &:first-child{
+        margin-right: 32px;
+    }
+}
+.icon-important{
+    color: #F5A623;
+}
+.icon-note{
+    font-size: 18px; 
+    color: #757575;
+    li {
+        margin-right: 16px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+    
+}
+.task-done{
+    background-color: $done-color;
+    color: #9B9B9B;
+    h3{
+        text-decoration: line-through;
+    }
+}
+input[type="checkbox"] {
+    filter: sepia(100%) brightness(80%) hue-rotate(170deg) saturate(70%) contrast(300%);
+}
 .input-task{
     padding: 32px 32px 32px 67px;
     border: 2px solid $light-grey-color;
@@ -10,6 +55,8 @@
     }
 }
 .add-task{
+    margin-bottom: 24px;
+    margin-top: 24px;
     position: relative;
     display:inline-block;
     &::before{
