@@ -88,8 +88,36 @@ body {
   }
 }
 
+.mt-8 {
+  margin-top: 8px;
+}
+
 .mb-16 {
   margin-bottom: 16px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mr-14 {
+  margin-right: 14px;
+}
+
+.mr-32 {
+  margin-right: 32px;
+}
+
+.ml-26 {
+  margin-left: 26px;
+}
+
+.mxw-200 {
+  max-width: 200px;
+}
+
+.mxw-400 {
+  max-width: 410px;
 }
 
 .container {
@@ -102,35 +130,26 @@ h3 {
 
 .task {
   border-radius: 5px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  background-color: #FFF2DC;
+  font-size: 20px;
+  -webkit-box-shadow: 0 4px 4px 0 #C8C8C8;
+          box-shadow: 0 4px 4px 0 #C8C8C8;
 }
 
 .task-card {
-  padding: 24px 72px;
-  margin-bottom: 8px;
-  background-color: #FFF2DC;
+  padding: 24px 32px 24px 72px;
   position: relative;
 }
 
 .task-card input {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   position: absolute;
   left: 32px;
-  -webkit-clip-path: inset(1px 1px 1px 1px round 2px);
-          clip-path: inset(1px 1px 1px 1px round 2px);
-}
-
-.icon {
-  font-size: 24px;
-  color: black;
-}
-
-.icon:first-child {
-  margin-right: 32px;
-}
-
-.icon-important {
-  color: #F5A623;
+  -webkit-clip-path: inset(4px 4px 4px 4px round 2px);
+          clip-path: inset(4px 4px 4px 4px round 2px);
 }
 
 .icon-note {
@@ -144,6 +163,43 @@ h3 {
 
 .icon-note li:last-child {
   margin-right: 0px;
+}
+
+.icon-note i {
+  width: 1.25em;
+  text-align: center;
+}
+
+.icon-edit:hover {
+  color: #7E7F9A;
+}
+
+.active .icon-edit {
+  color: #533A71;
+}
+
+.edit {
+  border-top: 2px solid #C8C8C8;
+  padding: 24px 72px;
+  color: black;
+  background-color: #F2F2F2;
+}
+
+.edit li {
+  margin-bottom: 24px;
+}
+
+.edit li:last-child {
+  margin-bottom: 0;
+}
+
+.icon {
+  font-size: 24px;
+  color: black;
+}
+
+.icon-important {
+  color: #F5A623;
 }
 
 .task-done {
@@ -161,6 +217,7 @@ input[type="checkbox"] {
 }
 
 .input-task {
+  border-radius: 5px;
   padding: 32px 32px 32px 67px;
   border: 2px solid #C8C8C8;
   font-size: 24px;
@@ -199,6 +256,25 @@ input[type="checkbox"] {
   top: 49%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.btn-list li {
+  width: 50%;
+}
+
+.btn-list li .cancel, .btn-list li .save {
+  padding: 16px;
+  font-size: 24px;
+}
+
+.btn-list li .cancel {
+  background: #fff;
+  color: #7E7F9A;
+}
+
+.btn-list li .save {
+  background: #7E7F9A;
+  color: #fff;
 }
 
 .header {

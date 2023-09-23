@@ -19,9 +19,67 @@
         </div>
     </header>
     <main class="container">
+        <!-- add task start -->
         <label class="w-100 add-task">
-            <input type="text" class="input-task task w-100" placeholder="Add Task">
+            <input type="text" class="input-task w-100" placeholder="Add Task">
         </label>
+        <!-- add task end -->
+        <!-- task start -->
+        <div class="task">
+            <label for="test1" class="task-card w-100 active">
+                <input type="checkbox" id="test1">
+                <div class="d-flex justify-content-between">
+                    <h3>Type Something Here…</h3>
+                    <!-- 重要事項、編輯 -->
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="icon icon-important">
+                                <i class="fa-regular fa-star d-none mr-32"></i>
+                                <i class="fa-solid fa-star mr-32"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="icon icon-edit">
+                                <i class="fa-solid fa-pencil"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </label>
+            <div class="edit icon-note">
+                <ul>
+                    <li>
+                        <span>
+                            <i class="fa-regular fa-calendar-xmark"></i>
+                        </span>
+                        <h4 class="d-inline">Deadline</h4>
+                        <div class="d-flex ml-26 mt-8">
+                            <input type="date" class="form-control mr-8 mxw-200" id="date" name="date">
+                            <input type="time" class="form-control mxw-200" id="time" name="time">
+                        </div>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa-regular fa-file"></i>
+                        </span>
+                        <h4 class="d-inline">File</h4>
+                        <input class="form-control ml-26 mt-8 mxw-400" type="file" id="formFile">
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa-regular fa-comment-dots"></i>
+                        </span>
+                        <h4 class="d-inline">Comment</h4>
+                        <textarea class="form-control ml-26 mt-8" rows="3" placeholder="Type your memo here…"></textarea>
+                    </li>
+                </ul>
+            </div>
+            <ul class="btn-list d-flex">
+                <li><a href="#" class="cancel"><i class="fa-solid fa-xmark mr-14"></i>Cancel</a></li>
+                <li><button type="button" class="save"><i class="fa-solid fa-plus mr-14"></i>Save</button></li>
+            </ul>
+        </div>
+        
         <label for="test1" class="task task-card w-100">
             <input type="checkbox" id="test1">
             <div class="d-flex justify-content-between mb-16">
@@ -30,8 +88,8 @@
                 <div class="d-flex">
                     <a href="#">
                         <span class="icon icon-important">
-                            <i class="fa-regular fa-star d-none"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star d-none mr-32"></i>
+                            <i class="fa-solid fa-star mr-32"></i>
                         </span>
                     </a>
                     <a href="#">
@@ -44,7 +102,7 @@
             </div>
             <ul class="d-flex icon-note">
                 <li>
-                    <span class="">
+                    <span>
                         <!-- <i class="fa-regular fa-calendar"></i> -->
                         <i class="fa-regular fa-calendar-xmark"></i>
                         <!-- <i class="fa-solid fa-calendar-days"></i> -->
@@ -52,12 +110,12 @@
                     <span>9/23</span>
                 </li>
                 <li>
-                    <span class="">
+                    <span>
                         <i class="fa-regular fa-file"></i>
                     </span>
                 </li>
                 <li>
-                    <span class="">
+                    <span>
                         <i class="fa-regular fa-comment-dots"></i>
                     </span>
                 </li>
@@ -71,8 +129,8 @@
                 <div class="d-flex">
                     <a href="#">
                         <span class="icon">
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-solid fa-star d-none"></i>
+                            <i class="fa-regular fa-star mr-32"></i>
+                            <i class="fa-solid fa-star mr-32 d-none"></i>
                         </span>
                     </a>
                     <a href="#">
