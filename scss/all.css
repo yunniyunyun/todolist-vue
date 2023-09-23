@@ -112,6 +112,10 @@ body {
   margin-left: 26px;
 }
 
+.ml-40 {
+  margin-left: 40px;
+}
+
 .mxw-200 {
   max-width: 200px;
 }
@@ -136,6 +140,10 @@ h3 {
   font-size: 20px;
   -webkit-box-shadow: 0 4px 4px 0 #C8C8C8;
           box-shadow: 0 4px 4px 0 #C8C8C8;
+}
+
+.task-title {
+  background: rgba(0, 0, 0, 0);
 }
 
 .task-card {
@@ -272,9 +280,17 @@ input[type="checkbox"] {
   color: #7E7F9A;
 }
 
+.btn-list li .cancel:hover {
+  color: #1F2041;
+}
+
 .btn-list li .save {
   background: #7E7F9A;
   color: #fff;
+}
+
+.btn-list li .save:hover {
+  background: #1F2041;
 }
 
 .header {
