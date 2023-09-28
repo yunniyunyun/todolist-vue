@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todolist</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./scss/all.css">
-    <script src="./js/all.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+    <script type="text/javascript" src="./js/all.js"></script>
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -20,72 +27,58 @@
         </div>
     </header>
     <main class="container">
-        <!-- add task start -->
-        <div class="">
-            <label class="w-100 add-task">
-                <input type="text" class="input-task w-100" placeholder="Add Task">
-            </label>
-
-            <div class="task">
-                <label for="test0" class="task-card w-100">
-                    <input type="checkbox" id="test0">
-                    <div class="d-flex justify-content-between">
-                        <h3><input type="text" class="ml-40 w-100 task-title" placeholder="Add Task"></h3>
-                        <!-- 重要事項、編輯 -->
-                        <div class="d-flex">
-                            <a href="#">
-                                <span class="icon icon-important">
-                                    <i class="fa-regular fa-star d-none mr-32"></i>
-                                    <i class="fa-solid fa-star mr-32"></i>
-                                </span>
-                            </a>
-                            <a href="#">
-                                <span class="icon icon-edit">
-                                    <i class="fa-solid fa-pencil"></i>
-                                </span>
-                            </a>
-                        </div>
+        <div class="task">
+            <div class="task-title">
+                <div class="d-flex justify-content-between">
+                    <h3 class="task-icon d-none">
+                        <input type="text" class="" placeholder="Add Task">
+                    </h3>
+                    <h3 class="task-icon">TASK 1</h3>
+                    <div class="d-flex">
+                        <a href="#">
+                            <span class="icon icon-important">
+                                <i class="fa-regular fa-star mr-32"></i>
+                                <i class="fa-solid fa-star d-none mr-32 color-yellow"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="icon icon-edit">
+                                <i class="fa-solid fa-pencil"></i>
+                            </span>
+                        </a>
                     </div>
-                </label>
-                <div class="edit icon-note">
-                    <ul>
-                        <li>
-                            <span>
-                                <i class="fa-regular fa-calendar-xmark"></i>
-                            </span>
-                            <h4 class="d-inline">Deadline</h4>
-                            <div class="d-flex ml-26 mt-8">
-                                <input type="date" class="form-control mr-8 mxw-200" id="date" name="date">
-                                <input type="time" class="form-control mxw-200" id="time" name="time">
-                            </div>
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-regular fa-file"></i>
-                            </span>
-                            <h4 class="d-inline">File</h4>
-                            <input class="form-control ml-26 mt-8 mxw-400" type="file" id="formFile">
-                        </li>
-                        <li>
-                            <span>
-                                <i class="fa-regular fa-comment-dots"></i>
-                            </span>
-                            <h4 class="d-inline">Comment</h4>
-                            <textarea class="form-control ml-26 mt-8" rows="3" placeholder="Type your memo here…"></textarea>
-                        </li>
-                    </ul>
                 </div>
-                <ul class="btn-list d-flex">
-                    <li><a href="#" class="cancel"><i class="fa-solid fa-xmark mr-14"></i>Cancel</a></li>
-                    <li><button type="button" class="save"><i class="fa-solid fa-plus mr-14"></i>Save</button></li>
+                <ul class="icon-content d-flex mt-16">
+                    <li>
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>9/28</span>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-comment-dots"></i>
+                    </li>
                 </ul>
             </div>
+            <ul class="task-edit d-none">
+                <li>
+                    <h4 class="mb-8">Deadline</h4>
+                    <div class="d-flex">
+                        <input type="date" class="form-control maxw-200" name="date" id="date">
+                        <input type="time" class="form-control maxw-200" name="time" id="time">
+                    </div>
+                </li>
+                <li>
+                    <h4 class="mb-8">Comment</h4>
+                    <textarea class="form-control" name="comment" id="comment" rows="3"
+                        placeholder="Type your memo here…"></textarea>
+                </li>
+            </ul>
+            <ul class="task-save d-flex d-none">
+                <li><a href="#" class="cancel task-icon">Cancel</a></li>
+                <li><button type="button" class="save task-icon">Save</button></li>
+            </ul>
         </div>
-        
-        <!-- add task end -->
-        <!-- task start -->
-        
     </main>
-    
+
 </body>
+
 </html>

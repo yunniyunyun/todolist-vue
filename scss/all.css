@@ -72,6 +72,7 @@ button {
   display: block;
   border: 0px solid #000;
   width: 100%;
+  height: 100%;
   font-size: 20px;
 }
 
@@ -88,40 +89,24 @@ body {
   }
 }
 
-.mt-8 {
-  margin-top: 8px;
+h4 {
+  font-size: 20px;
 }
 
-.mb-16 {
-  margin-bottom: 16px;
-}
-
-.mr-8 {
-  margin-right: 8px;
-}
-
-.mr-14 {
-  margin-right: 14px;
+.mt-16 {
+  margin-top: 16px;
 }
 
 .mr-32 {
   margin-right: 32px;
 }
 
-.ml-26 {
-  margin-left: 26px;
+.mb-8 {
+  margin-bottom: 8px;
 }
 
-.ml-40 {
-  margin-left: 40px;
-}
-
-.mxw-200 {
+.maxw-200 {
   max-width: 200px;
-}
-
-.mxw-400 {
-  max-width: 410px;
 }
 
 .container {
@@ -133,72 +118,69 @@ h3 {
 }
 
 .task {
+  margin-top: 24px;
+  background: #C9DAEA;
+  -webkit-box-shadow: 0 4px 4px 0 #c8c8c8;
+          box-shadow: 0 4px 4px 0 #c8c8c8;
   border-radius: 5px;
-  margin-bottom: 8px;
+  font-size: 24px;
   overflow: hidden;
-  background-color: #FFF2DC;
-  font-size: 20px;
-  -webkit-box-shadow: 0 4px 4px 0 #C8C8C8;
-          box-shadow: 0 4px 4px 0 #C8C8C8;
+}
+
+.task-title input {
+  background: rgba(0, 0, 0, 0);
+  border: 0px solid #000;
+  height: 24px;
+}
+
+.task-title input:focus {
+  outline: none;
+}
+
+.task-icon:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0c8";
+  display: inline-block;
+  padding-right: 16px;
+  vertical-align: middle;
+  font-weight: 400;
+}
+
+.add-task {
+  padding: 18px 32px;
+}
+
+.add-task .task-icon:before {
+  content: "\2b";
 }
 
 .task-title {
-  background: rgba(0, 0, 0, 0);
-}
-
-.task-card {
   padding: 24px 32px 24px 72px;
   position: relative;
 }
 
-.task-card input {
-  width: 32px;
-  height: 32px;
+.task-title .task-icon:before {
   position: absolute;
   left: 32px;
-  -webkit-clip-path: inset(4px 4px 4px 4px round 2px);
-          clip-path: inset(4px 4px 4px 4px round 2px);
 }
 
-.icon-note {
-  font-size: 18px;
-  color: #757575;
-}
-
-.icon-note li {
+.icon-content li {
   margin-right: 16px;
+  font-size: 16px;
 }
 
-.icon-note li:last-child {
-  margin-right: 0px;
+.check {
+  background: #f2f2f2;
+  color: #9B9B9B;
 }
 
-.icon-note i {
-  width: 1.25em;
-  text-align: center;
+.check .task-title .task-icon:before {
+  content: "\f14a";
+  font-weight: 900;
 }
 
-.icon-edit:hover {
-  color: #7E7F9A;
-}
-
-.active .icon-edit {
-  color: #533A71;
-}
-
-.edit {
-  border-top: 2px solid #C8C8C8;
-  padding: 24px 72px;
-  color: black;
-  background-color: #F2F2F2;
-}
-
-.edit li {
-  margin-bottom: 24px;
-}
-
-.edit li:last-child {
-  margin-bottom: 0;
+.check h3 {
+  text-decoration: line-through;
 }
 
 .icon {
@@ -206,91 +188,74 @@ h3 {
   color: black;
 }
 
-.icon-important {
+.color-yellow {
   color: #F5A623;
 }
 
-.task-done {
-  background-color: #F2F2F2;
-  color: #9B9B9B;
+.edit .icon-edit {
+  color: #4A90E2;
 }
 
-.task-done h3 {
-  text-decoration: line-through;
+.edit {
+  background: #F2F2F2;
 }
 
-input[type="checkbox"] {
-  -webkit-filter: sepia(100%) brightness(80%) hue-rotate(170deg) saturate(70%) contrast(300%);
-          filter: sepia(100%) brightness(80%) hue-rotate(170deg) saturate(70%) contrast(300%);
+.task-edit {
+  border-top: 2px solid #C8C8C8;
+  padding: 24px 98px;
 }
 
-.input-task {
-  border-radius: 5px;
-  padding: 32px 32px 32px 67px;
-  border: 2px solid #C8C8C8;
-  font-size: 24px;
-}
-
-.input-task::-webkit-input-placeholder {
-  color: #C8C8C8;
-}
-
-.input-task:-ms-input-placeholder {
-  color: #C8C8C8;
-}
-
-.input-task::-ms-input-placeholder {
-  color: #C8C8C8;
-}
-
-.input-task::placeholder {
-  color: #C8C8C8;
-}
-
-.add-task {
+.task-edit li {
+  font-size: 16px;
   margin-bottom: 24px;
-  margin-top: 24px;
   position: relative;
-  display: inline-block;
 }
 
-.add-task::before {
-  font-weight: 700;
-  content: "+";
-  font-size: 36px;
-  color: #C8C8C8;
+.task-edit li h4:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f4ad";
+  font-weight: 400;
   position: absolute;
-  left: 32px;
-  top: 49%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  left: -28px;
 }
 
-.btn-list li {
+.task-edit li:first-child h4::before {
+  content: "\f073";
+}
+
+.task-save li {
   width: 50%;
 }
 
-.btn-list li .cancel, .btn-list li .save {
-  padding: 16px;
-  font-size: 24px;
+.cancel,
+.save {
+  padding: 16px 24px;
 }
 
-.btn-list li .cancel {
+.cancel {
   background: #fff;
-  color: #7E7F9A;
+  color: #454B66;
 }
 
-.btn-list li .cancel:hover {
+.cancel:hover {
   color: #1F2041;
 }
 
-.btn-list li .save {
-  background: #7E7F9A;
-  color: #fff;
+.cancel:before {
+  content: "x";
 }
 
-.btn-list li .save:hover {
+.save {
+  background: #454B66;
+  color: white;
+}
+
+.save:hover {
   background: #1F2041;
+}
+
+.save:before {
+  content: "+";
 }
 
 .header {
