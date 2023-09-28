@@ -1,7 +1,7 @@
 .task {
     margin-top: 24px;
-    background: #C9DAEA;
-    box-shadow: 0 4px 4px 0 #c8c8c8;
+    background: $task-color;
+    box-shadow: 0 4px 4px 0 $light-grey-color;
     border-radius: 5px;
     font-size: 24px;
     overflow: hidden;
@@ -11,6 +11,7 @@
     background: rgba($color: #000000, $alpha: 0);
     border: 0px solid #000;
     height: 24px;
+
     &:focus {
         outline: none;
     }
@@ -37,12 +38,14 @@
 .task-title {
     padding: 24px 32px 24px 72px;
     position: relative;
-    .task-icon:before{
-     position: absolute;
-     left: 32px;
+
+    .task-icon:before {
+        position: absolute;
+        left: 32px;
     }
 }
-.icon-content li{
+
+.icon-content li {
     margin-right: 16px;
     font-size: 16px;
 }
@@ -73,7 +76,7 @@
 }
 
 .edit .icon-edit {
-    color: #4A90E2;
+    color: $edit-color;
 }
 
 .edit {
@@ -81,22 +84,24 @@
 }
 
 .task-edit {
-    border-top: 2px solid #C8C8C8;
+    border-top: 2px solid $light-grey-color;
     padding: 24px 98px;
 }
 
-.task-edit li{
+.task-edit li {
     font-size: 16px;
     margin-bottom: 24px;
     position: relative;
-    h4:before{
+
+    h4:before {
         font-family: "Font Awesome 5 Free";
         content: "\f4ad";
         font-weight: 400;
         position: absolute;
         left: -28px;
     }
-    &:first-child h4::before{
+
+    &:first-child h4::before {
         content: "\f073";
     }
 }
@@ -112,22 +117,26 @@
 
 .cancel {
     background: #fff;
-    color: #454B66;
-    &:hover{
-        color:$primary-color;
+    color: $primary-light-color;
+
+    &:hover {
+        color: $primary-color;
     }
+
     &:before {
         content: "x";
     }
 }
+
 .save {
-    background: #454B66;
+    background: $primary-light-color;
     color: white;
-    &:hover{
+
+    &:hover {
         background: $primary-color;
     }
+
     &:before {
         content: "+";
     }
 }
-
