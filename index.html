@@ -27,6 +27,46 @@
         </div>
     </header>
     <main class="container">
+        <div class="add-task">
+            <div class="task-title">
+                <div class="d-flex justify-content-between">
+                    <h3 class="task-icon">
+                        <input type="text" class="" placeholder="Add Task" value="">
+                    </h3>
+                    <div class="d-flex d-none">
+                        <a href="#">
+                            <span class="icon icon-important">
+                                <i class="fa-regular fa-star mr-32"></i>
+                                <i class="fa-solid fa-star d-none mr-32 color-yellow"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span class="icon icon-edit">
+                                <i class="fa-solid fa-pencil"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <ul class="task-edit d-none">
+                <li>
+                    <h4 class="mb-8">Deadline</h4>
+                    <div class="d-flex">
+                        <input type="date" class="form-control maxw-200" name="date" id="date">
+                        <input type="time" class="form-control maxw-200" name="time" id="time">
+                    </div>
+                </li>
+                <li>
+                    <h4 class="mb-8">Comment</h4>
+                    <textarea class="form-control" name="comment" id="comment" rows="3"
+                        placeholder="Type your memo here…"></textarea>
+                </li>
+            </ul>
+            <ul class="task-save d-flex d-none">
+                <li><a href="#" class="cancel task-icon">Cancel</a></li>
+                <li><button type="button" class="save task-icon">Save</button></li>
+            </ul>
+        </div>
         <div class="task">
             <div class="task-title">
                 <div class="d-flex justify-content-between">

@@ -10,11 +10,17 @@ $(document).ready(function () {
         $(this).addClass("d-none");
     });
 
-    $("a .icon-edit i").on("click", function () {
+    $(".task a .icon-edit i").on("click", function () {
         $(this).parents().eq(5).toggleClass("edit");
         $(this).parents().eq(4).children(".icon-content").toggleClass("d-none");
         $(this).parents().eq(3).children("h3").toggleClass("d-none");
         $(this).parents().eq(5).children(".task-edit").toggleClass("d-none");
         $(this).parents().eq(5).children(".task-save").toggleClass("d-none");
+    });
+    $(".add-task input").focus(function () {
+        $(this).parents().eq(1).children("div").toggleClass("d-none");
+        $(this).parents().eq(3).toggleClass("edit");
+        $(this).parents().eq(3).children(".task-edit").toggleClass("d-none");
+        $(this).parents().eq(3).children(".task-save").toggleClass("d-none");
     });
 });
