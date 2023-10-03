@@ -251,7 +251,7 @@ h3 {
 }
 
 .cancel:before {
-  content: "x";
+  content: "x" !important;
 }
 
 .save {
@@ -264,7 +264,7 @@ h3 {
 }
 
 .save:before {
-  content: "+";
+  content: "+" !important;
 }
 
 .header {

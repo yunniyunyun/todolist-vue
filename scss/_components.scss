@@ -134,7 +134,7 @@
     }
 
     &:before {
-        content: "x";
+        content: "x" !important;
     }
 }
 
@@ -147,6 +147,6 @@
     }
 
     &:before {
-        content: "+";
+        content: "+" !important;
     }
 }
